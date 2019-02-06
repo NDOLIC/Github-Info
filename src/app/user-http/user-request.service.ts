@@ -11,7 +11,7 @@ export class  UserRequestService {
     user:User;
 
   constructor(private http:HttpClient) { 
-    this.user=new User("",0,0,0,"","",new Date(2018,3,14));
+    this.user=new User("",0,0,0,"","");
   }
 
   userRequest(userInput){
@@ -25,7 +25,7 @@ export class  UserRequestService {
         following:number
         name:string
         html_url:string
-        completeDate:Date
+        
     }
 
     
@@ -39,7 +39,7 @@ export class  UserRequestService {
             this.user.followers=response.followers
             this.user.following=response.following
             this.user.html_url=response.html_url
-            this.user.completeDate=response.completeDate
+            
 
             resolve()
         },
@@ -50,7 +50,7 @@ export class  UserRequestService {
         this.user.following=0
         this.user.name=""
         this.user.html_url=""
-        this.user.completeDate
+        
         
                 reject(error)
             }

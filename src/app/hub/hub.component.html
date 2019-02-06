@@ -1,4 +1,4 @@
-<div class="users">
+<div class="container">
 
         <div class="inputform">
                 <input placeholder="type Username" [(ngModel)]=name><br><br>
@@ -10,13 +10,11 @@
         <blockquote class="text-center text-lg">
         
         <p><img src="{{user.avatar_url}}" class="view"></p>
-        <p appStrikethrough>User name :{{user.name}}<br>{{user.completeDate|dateCount|uppercase}} days</p>
-       <p appStrikethrough>Repositories : {{user.public_repos}}<br>{{user.completeDate|dateCount}} days</p>
-        <p appStrikethrough>Followers : {{user.followers}}<br>
-                {{user.completeDate|dateCount}} days
+        <p appStrikethrough>User name :{{user.name}}</p>
+       <p appStrikethrough>Repositories : {{user.public_repos}}</p>
+        <p appStrikethrough>Followers : {{user.followers}}
         </p>
-       <p appStrikethrough>Following : {{user.following}}<br>
-        {{user.completeDate|dateCount|uppercase}} days
+       <p appStrikethrough>Following : {{user.following}}
        </p>
         <p appStrikethrough>URL : {{user.html_url}}</p>
             
