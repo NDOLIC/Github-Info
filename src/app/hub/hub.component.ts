@@ -15,6 +15,13 @@ export class HubComponent implements OnInit {
 
   user:User
 
+  name = ""
+   
+  submitInput(){
+    this.userService.userRequest(this.name)
+    console.log(this.name)
+  }
+
   // constructor(private http:HttpClient) {
   //  }
 
@@ -23,7 +30,7 @@ export class HubComponent implements OnInit {
   
   }
   ngOnInit() {
-    this.userService.userRequest()
+    this.userService.userRequest('NDOLIC')
     this.user=this.userService.user
   }
     

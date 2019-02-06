@@ -14,8 +14,8 @@ export class  UserRequestService {
     this.user=new User("","",0,0,0,"","");
   }
 
-  userRequest(){
-
+  userRequest(userInput){
+    var userSearch = userInput
     
       interface ApiResponse{
         login:string
@@ -29,7 +29,7 @@ export class  UserRequestService {
 
     
     let promise =new Promise((resolve,reject)=>{
-        this.http.get<ApiResponse>('https://api.github.com/users/daneden').toPromise().then(response=>{
+        this.http.get<ApiResponse>('https://api.github.com/users/' + userSearch).toPromise().then(response=>{
             
             this.user.login=response.login
             this.user.name=response.name
