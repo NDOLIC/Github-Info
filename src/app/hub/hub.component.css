@@ -18,3 +18,8 @@
     width: 50%;
     border-radius: 60%;
   }
+  .inputform{
+      padding-top: 20px;
+      padding-bottom: 10px;
+      border-radius: 0.9%;
+  }
