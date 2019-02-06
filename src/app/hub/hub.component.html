@@ -10,13 +10,13 @@
         <blockquote class="text-center text-lg">
         
         <p><img src="{{user.avatar_url}}"></p>
-        <p appStrikethrough>User name :{{user.name}}<br>last seen{{user.completeDate|date|uppercase}}</p>
+        <p appStrikethrough>User name :{{user.name}}<br>last seen{{user.completeDate|date|uppercase}}<br>{{user.completeDate|dateCount}} days</p>
         <p appStrikethrough>Login :{{user.login}}<br>
-                last login{{user.completeDate|date|uppercase}}
+                last login{{user.completeDate|date|uppercase}}<br>{{user.completeDate|dateCount}} days
         </p>
-       <p appStrikethrough>Repositories : {{user.public_repos}}</p>
+       <p appStrikethrough>Repositories : {{user.public_repos}}<br>{{user.completeDate|dateCount}} days</p>
         <p appStrikethrough>Followers : {{user.followers}}<br>
-                followed on{{user.completeDate|date|uppercase}}
+                followed on{{user.completeDate|date|uppercase}}<br>{{user.completeDate|dateCount}} days
         </p>
        <p appStrikethrough>Following : {{user.following}}<br>
             last following{{user.completeDate|date|uppercase}}
