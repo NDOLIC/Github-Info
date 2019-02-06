@@ -10,7 +10,7 @@
         <blockquote class="text-center text-lg">
         
         <p><img src="{{user.avatar_url}}"></p>
-        <p appStrikethrough>User name :{{user.name}}</p>
+        <p appStrikethrough>User name :{{user.name}}<br>last seen{{user.completeDate|date}}</p>
         <p appStrikethrough>Login :{{user.login}}</p>
        <p appStrikethrough>Repositories : {{user.public_repos}}</p>
         <p appStrikethrough>Followers : {{user.followers}}</p>
