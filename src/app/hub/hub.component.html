@@ -1,5 +1,5 @@
 <div class="container">
-    
+
         <div class="inputform">
                 <input placeholder="type Username" [(ngModel)]=name>
                 <button (click)="submitInput()">Search</button>
@@ -10,14 +10,16 @@
         <blockquote class="text-center text-lg">
         
         <p><img src="{{user.avatar_url}}"></p>
-        <p>User name :{{user.name}}</p>
-        <p> Login :{{user.login}}</p>
-       <p>Repositories : {{user.public_repos}}</p>
-        <p>Followers : {{user.followers}}</p>
-       <p>Following : {{user.following}}</p>
-        <p>URL : {{user.html_url}}</p>
+        <p appStrikethrough>User name :{{user.name}}</p>
+        <p appStrikethrough>Login :{{user.login}}</p>
+       <p appStrikethrough>Repositories : {{user.public_repos}}</p>
+        <p appStrikethrough>Followers : {{user.followers}}</p>
+       <p appStrikethrough>Following : {{user.following}}</p>
+        <p appStrikethrough>URL : {{user.html_url}}</p>
             
         </blockquote>
     </div>
+
+    
 <app-user-form></app-user-form>
 </div>
