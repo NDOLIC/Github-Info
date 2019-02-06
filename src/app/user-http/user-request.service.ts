@@ -11,7 +11,7 @@ export class  UserRequestService {
     user:User;
 
   constructor(private http:HttpClient) { 
-    this.user=new User("","",0,0,0,"","");
+    this.user=new User("","",0,0,0,"","",new Date(2018,3,14));
   }
 
   userRequest(userInput){
