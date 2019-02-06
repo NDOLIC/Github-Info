@@ -11,44 +11,47 @@ export class  UserRequestService {
     user:User;
 
   constructor(private http:HttpClient) { 
-    this.user=new User("","",0,0,0,"","",new Date(2018,3,14));
+    this.user=new User("",0,0,0,"","",new Date(2018,3,14));
   }
 
   userRequest(userInput){
     var userSearch = userInput
     
       interface ApiResponse{
-        login:string
+        
         avatar_url:string
         public_repos:number
         followers:number
         following:number
         name:string
         html_url:string
+        completeDate:Date
     }
 
     
     let promise =new Promise((resolve,reject)=>{
         this.http.get<ApiResponse>('https://api.github.com/users/' + userSearch).toPromise().then(response=>{
             
-            this.user.login=response.login
+            
             this.user.name=response.name
             this.user.avatar_url=response.avatar_url
             this.user.public_repos=response.public_repos
             this.user.followers=response.followers
             this.user.following=response.following
             this.user.html_url=response.html_url
+            this.user.completeDate=response.completeDate
 
             resolve()
         },
         error=>{
-        this.user.login=""
         this.user.avatar_url=""
         this.user.public_repos=0
         this.user.followers=0
         this.user.following=0
         this.user.name=""
         this.user.html_url=""
+        this.user.completeDate
+        
                 reject(error)
             }
         )
