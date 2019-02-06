@@ -2,6 +2,7 @@
     background-color: gray;
     border-radius: 2%;
     background-size: cover;
+    justify-content: center;
 }
 /* img{
     border-radius: 60%;
