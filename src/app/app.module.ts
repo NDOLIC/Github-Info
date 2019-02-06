@@ -12,7 +12,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {RoutingModule} from './routing/routing.module';
 import { UserFormComponent } from './user-form/user-form.component';
-import { StrikethroughDirective } from './strikethrough.directive'
+import { StrikethroughDirective } from './strikethrough.directive';
+import { DateCountPipe } from './date-count.pipe'
 
 const routes:Routes=[
   {path:"hub",component:HubComponent},
@@ -28,7 +29,8 @@ const routes:Routes=[
     AboutComponent,
     NotFoundComponent,
     UserFormComponent,
-    StrikethroughDirective
+    StrikethroughDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
