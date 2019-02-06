@@ -2,3 +2,9 @@
     background-color: gray;
 border-radius: 2%;
 }
+img{
+    border-radius: 60%;
+    justify-content: center;
+    height: 80;
+    width: 80;
+}
